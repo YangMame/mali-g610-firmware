@@ -1,0 +1,11 @@
+[Unit]
+Description=Set mali firmware based on kernel version
+Before=display-manager.service
+
+[Service]
+WorkingDirectory=/usr/bin
+ExecStart=/usr/bin/set-mali-firmware.sh
+Type=oneshot
+
+[Install]
+WantedBy=default.target
